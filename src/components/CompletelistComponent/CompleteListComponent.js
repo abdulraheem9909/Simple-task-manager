@@ -7,22 +7,28 @@ const CompleteListComponent = (props) => {
         <div
           style={{
             display: "flex",
-            justifyContent: "center",
+            justifyContent: "flex-start",
             flex: "1",
             padding: "0 50px",
             height: "40px",
           }}
         >
-          <p
-            style={{
-              display: "flex",
-              justifyContent: "flex-start",
-              flex: "1",
-              textDecorationLine: "line-through",
-            }}
-          >
-            {props.title}
-          </p>
+          <ul>
+            {" "}
+            <li>
+              {" "}
+              <p
+                style={{
+                  display: "flex",
+                  justifyContent: "flex-start",
+                  flex: "1",
+                  textDecorationLine: "line-through",
+                }}
+              >
+                {props.title}
+              </p>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

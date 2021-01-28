@@ -39,7 +39,7 @@ const TodoList = (props) => {
           outline: "none",
           border: "none",
         }}
-        onClick={deleteHandler}
+      
       >
         Edit
       </button>
