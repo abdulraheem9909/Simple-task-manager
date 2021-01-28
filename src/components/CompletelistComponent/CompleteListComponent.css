@@ -1,0 +1,19 @@
+.completelist-component {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". . . . . . back"
+    "completelist completelist completelist completelist completelist completelist completelist"
+    "completelist completelist completelist completelist completelist completelist completelist"
+    "completelist completelist completelist completelist completelist completelist completelist"
+    "completelist completelist completelist completelist completelist completelist completelist"
+    "completelist completelist completelist completelist completelist completelist completelist"
+    "completelist completelist completelist completelist completelist completelist completelist"
+    "completelist completelist completelist completelist completelist completelist completelist";
+}
+
+.back { grid-area: back; }
+
+.completelist { grid-area: completelist; }
