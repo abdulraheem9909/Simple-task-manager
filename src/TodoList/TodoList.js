@@ -3,10 +3,10 @@ import TodoListComponent from "../components/TodoListComponent/TodoListComponent
 import {connect} from "react-redux";
 
 const TodoList = (props) => {
-  //console.log(props.todoList);
+  console.log("todolist",props.todoList);
   return (
     props.todoList.map(items=>{
-      return<TodoListComponent key = {items.id} title={items.input}  id={items.id}/>
+      return<TodoListComponent key = {items.id} title={items.input}  id={items.id} description={items.description}/>
     })
 
 

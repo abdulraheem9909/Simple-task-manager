@@ -2,7 +2,7 @@ import React from "react";
 
 const CompleteListComponent = (props) => {
   return (
-    <div class="completelist-component" style={{display:"flex" ,height:"100%",width:"100%"}}>
+    <div class="completelist-component" style={{display:"flex" ,height:"20px",width:"100%"}}>
       <div class="completelist">
         <div
           style={{

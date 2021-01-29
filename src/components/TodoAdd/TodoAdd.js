@@ -9,6 +9,12 @@ const TodoAdd = (props) => {
   const [input, setInput] = useState("");
   const [empty, setEmpty] = useState("");
 
+  const onKeyPress = (e) => {
+    if(e.which === 13) {
+      clickHandler();
+    }
+  }
+
   const clickHandler = () => {
     let data = {
       id: Math.floor(Math.random() * 999999),
@@ -31,6 +37,7 @@ const TodoAdd = (props) => {
           placeholder="Enter your task"
           value={input}
           onChange={(e) => setInput(e.target.value)}
+          onKeyPress={onKeyPress}
         />
         <button onClick={clickHandler}
         style={{height:"50px", width:"10%",borderRadius:"20px", marginLeft:"10px",outline: "none"}}
