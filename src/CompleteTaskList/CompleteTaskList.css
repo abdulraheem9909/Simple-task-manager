@@ -1,13 +1,15 @@
-.list{
+.Completelist{
+  display: flex; /* Hidden by default */
+  align-items: center;
+  flex-direction: column;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
  
-  width: 100%;
-  height: 80%;
- 
-  overflow-y: scroll;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-
-  box-sizing: border-box;
-  transition: transform 0.3s ease-out;
+  background-color: white; /* Fallback color */
+  overflow: auto
 }

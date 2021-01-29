@@ -7,7 +7,9 @@ import "./CompleteTaskList.css";
 const CompleteTaskList = (props) => {
   console.log("completetask", props.completeList);
   return (
-    <div className="list">
+   
+    <div className="Completelist">
+    <h1>Completed tasks :</h1>
       {props.completeList.map((items) => {
         return items.map((item) => {
           return (
@@ -20,7 +22,7 @@ const CompleteTaskList = (props) => {
         });
       })}
       <div
-        style={{ display: "flex", justifyContent: "center", marginTop: "50px" }}
+        style={{ display: "flex", justifyContent: "center", marginTop: "50px" ,width:"100%", alignItems:"center"}}
       >
         <button
           onClick={() => {
@@ -28,7 +30,7 @@ const CompleteTaskList = (props) => {
           }}
           style={{
             height: "50px",
-            width: "10%",
+            width: "80%",
             borderRadius: "20px",
             marginLeft: "10px",
             display: "flex",
@@ -45,6 +47,7 @@ const CompleteTaskList = (props) => {
         </button>
       </div>
     </div>
+  
   );
 };
 

@@ -1,8 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
+import { Route, withRouter } from "react-router-dom";
 import { Delete } from "../../redux/actionCreator/actionCreator";
 import { Complete } from "../../redux/actionCreator/actionCreator";
 import { CompleteList } from "../../redux/actionCreator/actionCreator";
+import EditModal from "../../EditModal/EditModal";
 
 const TodoList = (props) => {
   const deleteHandler = () => {
@@ -39,8 +41,10 @@ const TodoList = (props) => {
           outline: "none",
           border: "none",
         }}
-      
+
+        onClick={()=> {props.history.push("edit")}}
       >
+     
         Edit
       </button>
       <button
@@ -63,6 +67,10 @@ const TodoList = (props) => {
       >
         Done
       </button>
+      <Route exact  path="/edit">
+      <EditModal {...props}/>
+      </Route>
+      
     </div>
   );
 };
@@ -74,4 +82,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(null, mapDispatchToProps)(TodoList);
+export default connect(null, mapDispatchToProps)(withRouter(TodoList));
